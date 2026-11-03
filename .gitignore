@@ -31,6 +31,16 @@ venv/
 .venv/
 ENV/
 
+# Model checkpoints & heavy media
+*.pt
+*.onnx
+*.bin
+artifacts/sample_data/*.mp4
+artifacts/sample_data/*.webm
+artifacts/highlights/*.mp4
+artifacts/cache/*.parquet
+!artifacts/**/.gitkeep
+
 # Production builds
 .next/
 out/

@@ -86,3 +86,74 @@ Both Python (`pydantic` v2) and TypeScript (`zod`) MUST implement these exact sc
 ```
 
 > **Note:** `joints_3d` MUST contain exactly 17 COCO-format 3D keypoints relative to `root_xyz`, with the lowest ankle joint clamped such that $\min(Z_{ankle}) = 0.0\text{ m}$ during ground contact.
+
+## 4. `MatchSummaryReport` (Python Worker -> Frontend Dashboard & Share Cards)
+```json
+{
+  "match_id": "uuid-v4",
+  "duration_analysed_sec": 3600.0,
+  "ball_visibility_pct": 94.5,
+  "motm_track_id": 7,
+  "team_stats": {
+    "team_0": {
+      "possession_pct": 54.2,
+      "goals": 3,
+      "total_xg": 2.41,
+      "shots_total": 11,
+      "shots_on_target": 7,
+      "passes_completed": 118,
+      "passes_progressive": 24,
+      "balls_won": 31,
+      "balls_lost": 28,
+      "avg_convex_hull_m2": 310.5,
+      "avg_defensive_line_m": 18.4,
+      "territory_thirds_pct": [28.0, 41.0, 31.0]
+    }
+  },
+  "player_stats": [
+    {
+      "track_id": 7,
+      "team_id": 0,
+      "role": "PLAYER",
+      "time_on_pitch_sec": 3500.0,
+      "match_rating": 9.2,
+      "goals": 2,
+      "assists": 1,
+      "xg": 1.15,
+      "shots": 4,
+      "max_shot_speed_kmh": 68.4,
+      "passes_completed": 29,
+      "progressive_passes": 6,
+      "line_breaking_passes": 3,
+      "balls_won": 5,
+      "balls_lost": 3,
+      "total_distance_km": 4.82,
+      "meters_per_min": 82.6,
+      "top_speed_kmh": 26.1,
+      "sprint_count": 14,
+      "accelerations_high": 22,
+      "decelerations_high": 19,
+      "speed_zones_pct": {
+        "walking": 42.0,
+        "jogging": 38.5,
+        "hard_running": 14.5,
+        "sprinting": 5.0
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_id": "evt_01",
+      "type": "GOAL",
+      "timestamp_sec": 1380.0,
+      "team_id": 0,
+      "scorer_track_id": 7,
+      "assist_track_id": 4,
+      "shot_speed_kmh": 64.2,
+      "distance_to_goal_m": 11.4,
+      "xg": 0.42,
+      "clip_url": "artifacts/highlights/evt_01.mp4"
+    }
+  ]
+}
+```

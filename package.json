@@ -1,0 +1,13 @@
+{
+  "name": "var-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "pnpm --recursive run typecheck",
+    "lint": "pnpm --recursive run lint",
+    "test": "pnpm --recursive run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

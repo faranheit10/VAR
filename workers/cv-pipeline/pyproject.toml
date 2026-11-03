@@ -1,0 +1,30 @@
+[project]
+name = "cv-pipeline"
+version = "0.1.0"
+description = "8v8 Turf AI Computer Vision & Kinematics Pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "torchvision",
+    "opencv-python-headless",
+    "ultralytics",
+    "supervision",
+    "transformers",
+    "umap-learn",
+    "scikit-learn",
+    "scipy",
+    "pydantic>=2.0",
+    "pytest",
+    "mypy",
+    "sahi",
+]
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+python_files = ["test_*.py", "verify_*.py"]
