@@ -6,5 +6,7 @@ Always consult and strictly adhere to:
 - `ARCHITECTURE_AND_DESIGN.md`
 - `DATA_CONTRACTS.md`
 - `GOLD_STANDARDS.md`
+- `MODEL_AND_HARDWARE_MANIFEST.md`
+- `EDGE_CASES_AND_GUARDRAILS.md`
 - `PHASED_TASKS.md`
 - `PROGRESS_LOG.md`
